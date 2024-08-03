@@ -15,5 +15,5 @@ C-->RKL[round key length]-->RN[Round Number\n10 rounds for 128 bits\n12 rounds f
 FC[nonlinear data \nmodifying function]
 FC-->RK
 B-->D
-C-->D
+
 ```
