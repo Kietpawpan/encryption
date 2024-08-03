@@ -11,7 +11,7 @@ flowchart TD
      FN-->G
 A-->C
 C-->RK[round keys]-->D
-C-->RKL[round key length]-->RN[round number]-->D
+C-->RKL[round key length]-->RN[round number\n10 roundd for 128 bits\n12 rounds for 223 bits\n14 rounds for 256 bits]-->D
 FC[nonlinear data \nmodifying function]-->D
 FC-->RK
 B-->D
