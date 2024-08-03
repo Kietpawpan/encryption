@@ -7,7 +7,7 @@ flowchart TD
     A[Sender] --> B[plaintext]-->FC
     C[private key]-->FC-->D[ENCRYPTION]-->E[ciphertext]-->D
     E-->FN[10th, 12nd, or 14th round\nciphertext]-->F[Recipient]
-    C2[same private key]--->G[DECRYPTION]-->I[same plaintext]-->F
+    C2[same private key]-->G[DECRYPTION]-->I[same plaintext]-->F
      FN-->G
 A-->C
 C-->RK[round keys]-->D
