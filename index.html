@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Encryption</title>
+
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<link rel="stylesheet" href="./MNRE _ Carbon_files/css(1)">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link 
+		rel="preconnect" 
+		href="https://fonts.googleapis.com"
+	>
+	<link 
+		rel="preconnect" 
+		href="https://fonts.gstatic.com" 
+		crossorigin
+	>
+	<link 
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" 
+		rel="stylesheet"
+	>
+
+
+
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+textarea{
+  width:100%;
+}
+textarea:focus {
+  outline: none;
+}
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size:;
+  cursor: pointer;
+  border-radius:5px;
+  font-family:"Noto Sans Thai", sans-serif;
+}
+
+
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+
+.fa-clone{
+ font-size:4vw;!important;
+}
+.fa-clone:hover{
+   color:RoyalBlue!important;
+}
+
+</style>
+
+
+
+</head>
+<body class="w3-light-grey">
+
+
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>ENCRYPT 72</b></h1>
+   <p><font size="+2">
+      โปรแกรมเข้ารหัสข้อมูล <span class="w3-tag">AES | ISO 18003-3</span> 
+  | Credits</font>
+	</p>
+
+<style>
+.myapp{
+font-family:"Kanit";
+}
+
+.ref{
+        padding-left: 1.5em;
+        text-indent:-1.5em;
+}
+</style>
+  
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+ 
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+     <div class="w3-container">
+      <h3 style="background-color:green;color:white;text-align:center;margin-top:0px;"><b>
+	Advanced Encryption Standard
+	</b>
+      </h3>
+      <h5><span class="w3-opacity"><font size="+2">โปรแกรมนี้ ใช้สำหรับเข้ารหัสข้อมูลแบบ block ciphers ด้วยวิธี Advanced Encryption Standard (AES) เพื่อคุ้มครองข้อมูลข่าวสารลับ ตั้งแต่ระดับลับ (CONFIDENTIAL) ลับมาก (SECRET) ถึงลับที่สุด (TOP SECRET) รายละเอียดตามนโยบายคณะกรรมการด้านระบบความปลอดภัยแห่งชาติของประเทศสหรัฐอเมริกา (<a style="text-decoration:none;" href="cnss15fs.pdf">U.S. Committee on National Security Systems: CNSS</a>) และคำแนะนำของสำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
+">Cybersecurity and Infrastructure Security Agency</a>) เมื่อปี พ.ศ. 2567 
+</span><br><br>
+
+<div class="myapp">
+<textarea 
+	oninput ="setH()"
+	type="text" 
+        id="data1" 
+	placeholder="Classified information" 
+	required>
+</textarea>
+</div>
+
+<div class="myapp">
+<textarea 	
+	oninput="setH()" 
+	type="text" 
+	id="key1" 
+	placeholder="Private key" 
+	required 
+	style="margin-top:5px;">
+</textarea>
+</div>
+
+<!--
+<div class="myapp">
+	<p align="left">
+	<span id="c1">
+		<i 	class='fa fa-clone' 
+			onclick="copyPK()">
+		</i>
+	</span>
+	</p>
+</div>
+-->
+
+<div class="myapp">
+<p float="right">
+<button 
+	class="btn"
+	onclick="enc()" 
+	style="margin-top:5px;
+		margin-bottom:10px;">
+	<i 
+		class="fa fa-lock ">
+	</i>
+			ENCRYPT
+</button>
+</p>
+</div>
+
+<div class="myapp">
+<p align="left">
+<b>
+Encrypted:
+</b>
+</p>
+<textarea id="t1" 
+	style="width=100%"
+	placeholder="Output/Ciphertext"
+	oninput="setH()">
+</textarea>
+</div>
+
+<br>
+<div class="myapp" 
+	style="float:left;">
+
+	<span id="c2">
+	<i
+	class='fa fa-clone' 
+	onclick="copy1()" 
+	style="float:left">
+	</i>
+	</span>
+</div>
+
+</p>
+
+<div class="myapp" style="font-size:40px;font-weight:bold;"><center>
+<br><hr><br>
+				AES Decryption 
+
+</center></div>
+
+<div class="myapp">
+<textarea 
+	oninput="setH()"
+	style=""
+	type="text" 
+	id="data2" 
+	placeholder="Ciphertext" 
+	required>
+</textarea>
+</div>
+
+<div class="myapp">
+<textarea 
+	oninput="setH()" 
+	type="text" id="key2" 
+	placeholder="Private key" 
+	required 
+	style="margin-top:5px;">
+</textarea>
+</div>
+
+<div class="myapp">
+<button onclick="dec()" 
+	style="margin-top:5px;"
+	class="btn"
+	><i class="fa fa-unlock "></i> 
+	DECRYPT
+</button>
+</div>
+
+</p>
+<div class="myapp">
+<p align="left">
+<b>
+Decrypted:
+</b>
+</p>
+<textarea 
+	id="data3"
+	oninput="setH()"
+	style=""
+	placeholder="Output/Plaintext">
+</textarea>
+</div>
+
+<div class="myapp">
+<p align="left">
+<span id="c3">
+			<i 
+				class='fa fa-clone' 
+				onclick="copy3()">
+			</i>
+</p>
+</div>
+
+<div id="3"></div>
+
+<div class="myapp">
+
+<button class="btn"
+	style="margin-top:5px;
+	float:right;
+	margin-bottom:10px;"
+	onclick="clearAll()">
+		<i class="fa fa-trash ">
+		</i>
+			CLEAR
+</button>
+</div>
+<br><br>
+<div class="myapp">
+<b>เทคนิคการเข้ารหัส</b><br>
+<ol>
+<li> ความยาวของ private key ที่ใช้ล็อคข้อมูล มีหน่วยวัดเป็นบิท (bit) เพราะข้อมูลดิจิทัล เป็นเลขฐานสอง (binary number) คือ 1 และ 0 เท่านั้น หาก private key มี 1 ตัวอักษร จะมีขนาด 8 บิท หรือ 1 ไบต์ (byte) เช่น “a” จะถูกแทนด้วย 01100001 ทั้งนี้ ความยาวของ private key จะเป็นตัวกำหนดความยาวของ round keys (กุญแจที่ใช้แปลงข้อมูลแต่ละรอบ) ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี และทุกครั้ง การเข้ารหัสจะใช้ข้อมูลที่จะเข้ารหัส (plaintext) ผสมกับ round key รอบละ 1 ดอก ในลักษณะที่ซับซ้อน (ตัดข้อมูลเป็น block และตัดย่อยเป็นชิ้น ๆ แล้วสลับตำแหน่ง ไม่ให้แปรผันตรงกับข้อมูลเดิม (nonlinear complex modification) โดยมีการเปลี่ยน round key ทุกรอบ และเพิ่มจำนวนรอบการเข้ารหัสเป็น 10 12 และ 14 รอบ สำหรับ round keys ขนาด 128 192 และ 256 บิท ตามลำดับ</li>
+
+<li>โปรแกรมนี้ใช้ JavaScript ในการเข้ารหัสแบบ AES โดยอาศัย source code จาก <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js เวอร์ชัน 4.2.0)</li>
+
+<li>ในปี พ.ศ. 2567 สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
+">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานของรัฐในประเทศ ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ แทนวิธีเดิม (Data Encryption Standard หรือ DES)</li>
+
+<li>คณะกรรมการด้านระบบความปลอดภัยแห่งชาติของประเทศสหรัฐอเมริกา (<a style="text-decoration:none;" href="cnss15fs.pdf">U.S. Committee on National Security Systems: CNSS</a>) กำหนดนโยบายให้ใช้ AES เข้ารหัสข้อมูลข่าวสารลับ ระดับลับที่สุด (TOP  SECRET) โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท ใช้เข้ารหัสข้อมูลข่าวสารลับ ระดับลับมาก (SECRET) 
+</li>
+
+		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a style="text-decoration:none;" href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากท่านลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> </li>
+		
+		<li>ควรกำหนด private key ให้คาดเดาได้ยาก และเก็บเป็นความลับ ให้เข้าถึงได้เฉพาะผู้มีหน้าที่เกี่ยวข้องเท่านั้น</li>
+		<li>สำหรับ Developer หากจำเป็นต้องใช้ private key ใน source code ควรนำ private key นั้น มาทำการ hash แล้วบันทึก hashed text แทน โดยใช้ Secure Hash Algorithm (SHA) ที่ยังไม่มีประวัติการถูกเจาะสำเร็จ เช่น SHA3-512</li>
+</ol>
+</div>
+<div class="myapp">
+<font color="blue">
+	<h3>
+		SHA3-512:
+	</h3>
+</font>
+
+<textarea 
+	id="data5" 
+	style="" 
+	placeholder="Private key"
+	oninput="setH()">
+</textarea>
+
+<br>
+<p align="right">
+<button class="btn"
+	onclick="hash()" 
+	style="margin-top:5px;"><i class="fa fa-lock "></i>
+	HASH
+</button><br>
+</p>
+<b>
+	Hashed:
+</b>
+
+<br>
+
+<textarea 
+	id="data4" 
+	oninput="setH()" 
+	style="" 
+	placeholder="Hashed text">
+</textarea>
+
+<br>
+
+
+
+	<p align="left">
+<span id="c4">
+		<i  
+		class='fa fa-clone' 
+		onclick="copy2()">
+		</i>
+<span>
+	</p>
+
+<p align="right">
+	<button class="btn"
+
+		onclick="clearHash()"><i class="fa fa-trash "></i>
+			 CLEAR
+	</button>
+</p>
+
+</div>
+
+
+<div class="myapp"><b>เอกสารอ้างอิง</b><br></div>
+
+<div class="ref">
+U.S. National Institute of Standards and Technology (NIST). 2000. <b>Advanced Encryption Standard (AES)</b>. Federal Information Processing Standards Publication. 38 pp. (<a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf">https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf</a>). 
+</div>
+
+<div class="ref">
+U.S. Committee on National Security Systems. 2003. CNSS Policy No. 15, Fact Sheet No. 1
+<b>National Policy on the Use of the Advanced Encryption Standard (AES) to
+Protect National Security Systems and National Security Information</b>. CNSS Secretariat (I42) . National Security Agency. 3 pp. (<a href="https://csrc.nist.gov/csrc/media/projects/cryptographic-module-validation-program/documents/cnss15fs.pdf">https://csrc.nist.gov/csrc/media/projects/cryptographic-module-validation-program/documents/cnss15fs.pdf</a>).
+</div>
+
+<div class="ref">
+U.S. Cybersecurity and Infrastructure Security Agency. 2024. <b>Transition to Advanced
+Encryption Standard (AES)</b>. (<a href="https://www.cisa.gov/sites/default/files/2024-05/23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf">https://www.cisa.gov/sites/default/files/2024-05/23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf</a>).
+</div>
+
+<div class="ref">
+Mott, J. and E. Vosberg. 2016. <b>Crypto-js Javascript Library</b>. Github Repository. (<a href="https://github.com/brix/crypto-js">https://github.com/brix/crypto-js</a>).
+</div>
+
+<div class="ref">
+Mott, J. and E. Vosberg. 2016. <b>A simple SHA-3 / Keccak / Shake hash function for JavaScript supports UTF-8 encoding</b>.
+(<a href="https://github.com/emn178/js-sha3">https://github.com/emn178/js-sha3</a>).
+</div>
+
+<p></p>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+
+
+
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top"><p align="center">
+  <img class="w3-animate-fading" src="mnre.png" style="width:50%"></p>
+    <div class="w3-container w3-white">
+      <h4><b>MNRE SLC</b></h4>
+      <p onclick="location.href=&#39;timeline.php&#39;">โครงการพัฒนาบริการอิเล็กทรอนิกส์ของศูนย์บริการร่วมกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม</p>
+    </div>
+  </div><hr>
+  
+</div><br>
+
+<!-- END w3-content -->
+</div>
+<center>Copyright © 2024 MNRE Service Link Center All rights reserved.<br><a style="text-decoration:none" href="https://esc.mnre.go.th/terms.html">เงื่อนไขบริการ</a> | <i class="fa fa-external-link " onclick="location.href=&#39;https://www.mnre.go.th/th/policy/content/1049&#39;"> นโยบายความเป็นส่วนตัว</i>
+
+
+</center>
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom" onclick="window.open(&#39;https://esc.mnre.go.th/&#39;, &#39;_self&#39;)">Home</button>
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Next »</button>
+</footer>
+<script src="crypto-js.min.js"></script>
+<script src="sha3.js"></script>
+<script src="ref.js"></script>
+<script src="encrypt.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</script>
+
+</div></body></html>
