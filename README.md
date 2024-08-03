@@ -9,8 +9,8 @@ flowchart TD
     E-->FN[10th, 12nd, or 14th round\nciphertext]-->F[Recipient]
     C2[same private key]-->G[DECRYPTION]-->I[same plaintext]-->F
      FN-->G
-A-->C
-C-->RK[round keys]-->D
+A-->C-->D
+RK[round keys]-->D
 C-->RKL[round key length]-->RN[Round Number\n10 rounds for 128 bits\n12 rounds for 192 bits\n14 rounds for 256 bits]-->D
 FC[nonlinear data \nmodifying function]-->D
 FC-->RK
