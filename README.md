@@ -6,7 +6,7 @@ Advanced Encryption Standard (AES) is the most secure encryption algorithm nowsa
 flowchart TD
     A[Sender] --> B[plaintext]-->D
     C[private key]-->D[ENCRYPTION]-->E[ciphertext]-->D
-    E-->FC[Final round\nciphertext]-->F[Recipient]
+    E-->FN[Final round\nciphertext]-->F[Recipient]
     C2[same private key]-->G[DECRYPTION]-->I[same plaintext]-->F
      E-->G
 A-->C
