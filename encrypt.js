@@ -106,8 +106,9 @@ function copyGuid(){
 }
 
 function clearAll(){
+	/*
 location.reload();
-/*
+*/
 document.getElementById('key1').value ="";
 document.getElementById('key2').value ="";
 document.getElementById('3').innerHTML ="";
@@ -117,7 +118,7 @@ document.getElementById('data2').value ="";
 document.getElementById('data3').value ="";
 document.getElementById('data4').value ="";
 document.getElementById('data1').value ="";
-*/
+document.getElementById('data2').blur();
 }
 
 
