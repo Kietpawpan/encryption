@@ -5,7 +5,7 @@ Advanced Encryption Standard (AES) is the most secure encryption algorithm nowsa
 ```mermaid
 flowchart TD
     A[Sender] --> B[plaintext]-->FC
-    C[private key]-->FC-->D[ENCRYPTION]-->E[ciphertext]-->D
+    C[private key]-->FC-->D[ENCRYPTION]--output-->E[ciphertext]--input-->D
     E-->FN[10th, 12nd, or 14th round\nciphertext]-->F[Recipient]
     C2[same private key]-->G[DECRYPTION]-->I[same plaintext]-->F
      FN-->G
