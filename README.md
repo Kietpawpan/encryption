@@ -13,4 +13,5 @@ A-->C
 C-->RK[round keys]-->D
 C-->RKL[round key length]-->RN[round number]-->D
 FC[nonlinear data \nmodifying function]-->D
+FC-->RK
 ```
