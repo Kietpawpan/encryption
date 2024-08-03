@@ -10,4 +10,6 @@ flowchart TD
     C2[same private key]-->G[DECRYPTION]-->I[same plaintext]-->F
      E-->G
 A-->C
+C-->RK[round keys]-->D
+FC[nonlinear data modifying function]-->D
 ```
