@@ -10,5 +10,4 @@ flowchart LR
     C2[same private key]-->G[DECRYPTION]-->I[same plaintext]-->F
      E-->G
 A-->C
-F-->C2
 ```
