@@ -1,5 +1,5 @@
 # encryption
-## [A Web App for Advanced Encryption Standards Implementation](https://kietpawpan.github.io/encryption)
+## [A Web App for Advanced Encryption Standard Implementation](https://kietpawpan.github.io/encryption)
 
 Advanced Encryption Standard (AES) is the most secure encryption algorithm nowsaday.
 ```mermaid
