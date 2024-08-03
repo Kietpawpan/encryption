@@ -11,5 +11,6 @@ flowchart TD
      E-->G
 A-->C
 C-->RK[round keys]-->D
-FC[nonlinear data modifying function]-->D
+C-->RKL[round key length]-->RN[round number]-->D
+FC[nonlinear data \nmodifying function]-->D
 ```
