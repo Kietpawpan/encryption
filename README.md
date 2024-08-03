@@ -3,10 +3,10 @@
 
 Advanced Encryption Standard (AES) is the most secure encryption algorithm nowsaday.
 ```mermaid
-flowchart LR
+flowchart TD
     A[Sender] --> B[plaintext]-->D
     C[private key]-->D[ENCRYPTION]-->E[ciphertext]
-    F[Receipiant]
+    F[Recipient]
     C2[same private key]-->G[DECRYPTION]-->I[same plaintext]-->F
      E-->G
 A-->C
