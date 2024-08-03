@@ -8,7 +8,7 @@ flowchart TD
     C[private key]-->D[ENCRYPTION]-->E[ciphertext]-->D
     E-->FN[Final round\nciphertext]-->F[Recipient]
     C2[same private key]-->G[DECRYPTION]-->I[same plaintext]-->F
-     E-->G
+     FN-->G
 A-->C
 C-->RK[round keys]-->D
 C-->RKL[round key length]-->RN[round number]-->D
