@@ -23,7 +23,7 @@ var encrypted = document.getElementById('data2').value;
 var key = document.getElementById('key2').value;
 var decrypted = CryptoJS.AES.decrypt(encrypted, key);
 if(decrypted==""){document.getElementById('3').innerHTML = "<center><font color='red'><i class='fa fa-exclamation-triangle '></i> Incorrect private key or ciphertext!</font></center>";document.getElementById('data3').innerHTML="";}
-else{document.getElementById('data3').innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
+else{document.getElementById('data3').value = decrypted.toString(CryptoJS.enc.Utf8);
 document.getElementById('data3').style.height = document.getElementById('data3').scrollHeight + 'px';
 document.getElementById('3').innerHTML ="<center><font color='RoyalBlue'><i class='fa fa-check-square '></i> Decrypted!</font></center>";}
 }
