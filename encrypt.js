@@ -1,5 +1,5 @@
 /* Copyright (c) 2024 by Monte Kietpawpan
- * encrypt.js | v1.0.3 August 3, 2024 
+ * encrypt.js | v1.0.4 August 4, 2024 
  * MIT License */
 
 
@@ -8,6 +8,15 @@ $(document).on('input', 'textarea', function () {
         $(this).outerHeight(38).outerHeight(this.scrollHeight); // 38 or '1em' -min-height
     }); 
 }
+
+function setPaste() {
+   navigator.clipboard.readText()
+	.then(text => {
+        document.getElementById("data2").value=text;
+
+});
+}
+
 
 function enc(){ /* crypto-js 4.2.0 */
 var message = document.getElementById('data1').value;
@@ -156,4 +165,3 @@ else {
         element.addEventListener(event, handler, false);
     };
 }
-
