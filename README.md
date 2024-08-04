@@ -17,7 +17,7 @@ FC-->RK
 B-->D
 
 ```
-ENCRYPT 72 get a private key as password/passphrase, e.g., "Password", to the crypto-js function:
+ENCRYPT 72 gets a private key as password/passphrase, e.g., "Password", to the crypto-js function:
 
 ```
 CryptoJS.AES.encrypt("Message", "Password");
