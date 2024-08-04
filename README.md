@@ -1,5 +1,5 @@
 # Encryption:
-## [A Web App for Advanced Encryption Standard Implementation](https://kietpawpan.github.io/encryption)
+## A Web App for Advanced Encryption Standard Implementation
 
 Advanced Encryption Standard (AES) is the most secure encryption algorithm nowsaday.
 ```mermaid
@@ -17,7 +17,7 @@ FC-->RK
 B-->D
 
 ```
-ENCRYPT 72 gets a private key as password/passphrase, e.g., "your private key", to the crypto-js function:
+[ENCRYPT 72](https://kietpawpan.github.io/encryption) gets a private key as password/passphrase, e.g., "your private key", to the crypto-js function:
 
 ```
 CryptoJS.AES.encrypt("Message", "your private key");
