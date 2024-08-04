@@ -17,9 +17,9 @@ FC-->RK
 B-->D
 
 ```
-ENCRYPT 72 gets a private key as password/passphrase, e.g., "Password", to the crypto-js function:
+ENCRYPT 72 gets a private key as password/passphrase, e.g., "your private key", to the crypto-js function:
 
 ```
-CryptoJS.AES.encrypt("Message", "Password");
+CryptoJS.AES.encrypt("Message", "your private key");
 ```
-Therfore, CryptoJs derives a 32 byte long encryption key for AES-256 and a 16 byte long initialization vector (iv) from the password, encrypts the "Message" using this key, iv in AES mode CBC and (default) padding Pkcs7 [(Michael Fehr, 2020)](https://stackoverflow.com/a/64802091)
+CryptoJs derives a 32 byte long encryption key for AES-256 and a 16 byte long initialization vector (iv) from the password, encrypts the "Message" using this key, iv in AES mode CBC and (default) padding Pkcs7 [(Michael Fehr, 2020)](https://stackoverflow.com/a/64802091)
