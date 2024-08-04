@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+
+<!Copyright (C) 2024 Monte Kietpwpan>
+
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>Encryption</title>
 
 <meta name="format-detection" content="telephone=no">
@@ -9,25 +13,14 @@
 <link rel="stylesheet" href="font-awesome.min.css">
 <link rel="stylesheet" href="./MNRE _ Carbon_files/css(1)">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link 
-		rel="preconnect" 
-		href="https://fonts.googleapis.com"
-	>
-	<link 
-		rel="preconnect" 
-		href="https://fonts.gstatic.com" 
-		crossorigin
-	>
-	<link 
-		href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" 
-		rel="stylesheet"
-	>
-
-
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap">
 
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+body,h1,h2,h3,h4,h5 {
+	font-family: "Raleway", sans-serif
+}
 
 body{
 	overflow-x: hidden;
@@ -35,10 +28,18 @@ body{
 
 textarea{
   width:100%;
+  font-size:35px;
+
 }
+
 textarea:focus {
   outline: none;
 }
+
+textarea::placeholder{
+	font-size:35px;
+}
+
 .btn {
   background-color: DodgerBlue;
   border: none;
@@ -58,18 +59,37 @@ textarea:focus {
 
 .fa-clone{
  font-size:4vw;!important;
+ color:grey;
 }
+
 .fa-clone:hover{
    color:RoyalBlue!important;
 }
 
+.fa-paste{
+ font-size:4vw;!important;
+ color:grey;
+}
+
+.fa-paste:hover{
+   color:RoyalBlue!important;
+}
+
+.myapp{
+font-family:"Kanit";
+}
+
+.ref{
+        padding-left: 1.5em;
+        text-indent:-1.5em;
+}
+
+
 </style>
 
-
-
 </head>
-<body class="w3-light-grey">
 
+<body class="w3-light-grey">
 
 <div class="w3-content" style="max-width:1400px">
 
@@ -81,16 +101,8 @@ textarea:focus {
   | <a href="https://kietpawpan.github.io/credit/en72credits.html">Credits</a></font>
 	</p>
 
-<style>
-.myapp{
-font-family:"Kanit";
-}
 
-.ref{
-        padding-left: 1.5em;
-        text-indent:-1.5em;
-}
-</style>
+
   
 </header>
 
@@ -108,8 +120,8 @@ font-family:"Kanit";
 	Advanced Encryption Standard
 	</b>
       </h3>
-      <h5><span class="w3-opacity" style="padding-top:20px;"><font size="+2">โปรแกรม ENCRYPT 72 ใช้สำหรับเข้ารหัสข้อมูลแบบ block ciphers ด้วยวิธี Advanced Encryption Standard (AES) เพื่อคุ้มครองข้อมูลข่าวสารของราชการที่มีชั้นความลับระดับลับ (CONFIDENTIAL) ลับมาก (SECRET) และลับที่สุด (TOP SECRET) รายละเอียดตามนโยบายและข้อเสนอแนะของคณะกรรมการด้านระบบความปลอดภัยแห่งชาติ (<a style="text-decoration:none;" href="cnss15fs.pdf">Committee on National Security Systems: CNSS</a>) และสำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของประเทศสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
-">Cybersecurity and Infrastructure Security Agency</a>) ทั้งนี้ AES ได้เข้ามาตรฐาน ISO/IEC 18033-3 และเป็นวิธีเข้ารหัสแบบที่ปลอดภัยที่สุดที่ทางการสหรัฐอเมริกาเลือกใช้อย่างเปิดเผยในปัจจุบัน (พ.ศ. 2567)
+      <h5><span class="w3-opacity" style="padding-top:20px;"><font size="+2">โปรแกรม ENCRYPT 72 ใช้สำหรับเข้ารหัสข้อมูล ด้วยวิธี Advanced Encryption Standard (AES) เพื่อคุ้มครองข้อมูลข่าวสารที่มีชั้นความลับ ระดับลับ (CONFIDENTIAL) ลับมาก (SECRET) และลับที่สุด (TOP SECRET) รายละเอียดตามนโยบายและข้อเสนอแนะของคณะกรรมการด้านระบบความปลอดภัยแห่งชาติ (<a style="text-decoration:none;" href="cnss15fs.pdf">Committee on National Security Systems: CNSS</a>) และสำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของประเทศสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
+">Cybersecurity and Infrastructure Security Agency</a>) ทั้งนี้ AES ได้เข้ามาตรฐาน ISO/IEC 18033-3
 </span><br><br>
 
 <div class="myapp">
@@ -205,6 +217,18 @@ Encrypted:
 </textarea>
 </div>
 
+<div class="myapp" 
+	style="float:right;">
+
+	<span id="c2">
+	<i
+	class='fa fa-paste' 
+	onclick="setPaste()" 
+	style="float:right">
+	</i>
+	</span>
+</div>
+
 <div class="myapp">
 <textarea 
 	oninput="setH()" 
@@ -267,20 +291,20 @@ Decrypted:
 <div class="myapp">
 <b>เทคนิคการเข้ารหัส</b><br>
 <ol>
-<li> ความยาวของ private key ที่ใช้ล็อคข้อมูล มีหน่วยวัดเป็นบิท (bit) เพราะข้อมูลดิจิทัล เป็นเลขฐานสอง (binary number) คือ 1 และ 0 เท่านั้น หาก private key มี 1 ตัวอักษร จะมีขนาด 8 บิท หรือ 1 ไบต์ (byte) เช่น “a” จะถูกแทนด้วย 01100001 ทั้งนี้ ความยาวของ private key จะเป็นตัวกำหนดความยาวของ round keys (กุญแจที่ใช้แปลงข้อมูลแต่ละรอบ) ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี และทุกครั้ง การเข้ารหัสจะใช้ข้อมูลที่จะเข้ารหัส (plaintext) ผสมกับ round key รอบละ 1 ดอก ในลักษณะที่ซับซ้อน (ตัดข้อมูลเป็น block และตัดย่อยเป็นชิ้น ๆ แล้วสลับตำแหน่ง ไม่ให้แปรผันตรงกับข้อมูลเดิม (nonlinear complex modification) โดยมีการเปลี่ยน round key ทุกรอบ และเพิ่มจำนวนรอบการเข้ารหัสเป็น 10 12 และ 14 รอบ สำหรับ round keys ขนาด 128 192 และ 256 บิท ตามลำดับ</li>
+<li> private key ที่ใช้ล็อคและปลดล็อคข้อมูล มีความยาวเป็นบิท (bit) โดย 1 ตัวอักษร เท่ากับ 8 บิท หรือ 1 ไบต์ (byte) เช่น “a” คือ 01100001 ทั้งนี้ ความยาวของ private key จะเป็นตัวกำหนดความยาวของ round keys (กุญแจที่ใช้แปลงข้อมูลในแต่ละรอบ) ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี และการเข้ารหัสจะใช้ข้อมูลต้นฉบับ (plaintext) ผสมกับ round key รอบละ 1 ดอก โดยมีการตัดข้อมูลเป็น block แต่ละ block ถูกตัดย่อยเป็นชิ้น ๆ แล้วสลับที่กัน ไม่ให้แปรผันแบบเส้นตรงกับข้อมูลเดิม (nonlinear complex modification) และมีการเปลี่ยน round key ทุกรอบ โดยที่จำนวนรอบการเข้ารหัส คือ 10 12 และ 14 รอบ สำหรับ round keys ขนาด 128 192 และ 256 บิท ตามลำดับ</li>
 
-<li>โปรแกรมนี้ใช้ JavaScript ในการเข้ารหัสแบบ AES โดยอาศัย source code จาก <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js เวอร์ชัน 4.2.0)</li>
+<li>โปรแกรมนี้ใช้ crypto-js มาตรฐาน ในการเข้ารหัสแบบ AES โดยใช้ JavaScript Library จาก <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js เวอร์ชัน 4.2.0)</li>
 
 <li>ในปี พ.ศ. 2567 สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
-">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานของรัฐในประเทศ ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ แทนวิธีเดิม (Data Encryption Standard หรือ DES)</li>
+">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานรัฐบาลสหรัฐอเมริกา ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ แทนมาตรฐานเดิม (Data Encryption Standard หรือ DES)</li>
 
-<li>คณะกรรมการด้านระบบความปลอดภัยแห่งชาติของประเทศสหรัฐอเมริกา (<a style="text-decoration:none;" href="cnss15fs.pdf">U.S. Committee on National Security Systems: CNSS</a>) กำหนดนโยบายให้ใช้ AES เข้ารหัสข้อมูลข่าวสารลับ ระดับลับที่สุด (TOP  SECRET) โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท ใช้เข้ารหัสข้อมูลข่าวสารลับ ระดับลับมาก (SECRET) 
+<li>คณะกรรมการด้านระบบความปลอดภัยแห่งชาติของประเทศสหรัฐอเมริกา (<a style="text-decoration:none;" href="cnss15fs.pdf">U.S. Committee on National Security Systems: CNSS</a>) มีนโยบายให้ใช้ AES เข้ารหัสข้อมูลข่าวสารลับ ระดับลับที่สุด (TOP  SECRET) โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท ใช้เข้ารหัสข้อมูลข่าวสารลับ ระดับลับมาก (SECRET) 
 </li>
 
-		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript โดยเปิดเผย <a style="text-decoration:none;" href="https://github.com/Kietpawpan/pdpa/tree/main/measures">source code</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากท่านลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> </li>
+		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript แบบ <a style="text-decoration:none;" href="https://github.com/Kietpawpan/pdpa/tree/main/measures">open source</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากท่านลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> </li>
 		
 		<li>ควรกำหนด private key ให้คาดเดาได้ยาก และเก็บเป็นความลับ ให้เข้าถึงได้เฉพาะผู้มีหน้าที่เกี่ยวข้องเท่านั้น</li>
-		<li>สำหรับ Developer หากจำเป็นต้องใช้ private key ใน source code ควรนำ private key นั้น มาทำการ hash แล้วบันทึก hashed text แทน โดยใช้ Secure Hash Algorithm (SHA) ที่ยังไม่มีประวัติการถูกเจาะสำเร็จ เช่น SHA3-512</li>
+		<li>สำหรับ Developer หากจำเป็นต้องใช้ private key ใน source code ควรนำ private key นั้น มาทำการ hash แล้วบันทึก hashed text แทน โดยใช้ Secure Hash Algorithm (SHA) ที่ปลอดภัยสูง เช่น SHA3-512</li>
 </ol>
 </div>
 <div class="myapp">
