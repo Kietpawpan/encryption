@@ -136,14 +136,16 @@ font-family:"Kanit";
 
 <div class="myapp">
 <textarea 	
-	oninput="setH()" 
+	oninput="setHx()" 
 	type="text" 
 	id="key1" 
-	placeholder="Private key" 
+	placeholder="Private key*" 
 	required 
 	style="margin-top:5px;">
 </textarea>
 </div>
+
+<div class="myapp" id='bit'><font color="grey">*Password หรือ Passphrase</font></div>
 
 <!--
 <div class="myapp">
@@ -159,7 +161,7 @@ font-family:"Kanit";
 
 <div class="myapp">
 <p float="right">
-<button 
+<button id="enc"
 	class="btn"
 	onclick="enc()" 
 	style="margin-top:5px;
