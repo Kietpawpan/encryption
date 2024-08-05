@@ -22,6 +22,16 @@ B-->D
 ```
 CryptoJS.AES.encrypt("Message", "your private key");
 ```
+
+## AES
+The Advanced Encryption Standard (AES) is a U.S. Federal Information Processing Standard (FIPS). It was selected after a 5-year process where 15 competing designs were evaluated.
+```
+var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
+​var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
+```
+CryptoJS supports AES-128, AES-192, and AES-256. It will pick the variant by the size of the key you pass in. If you use a passphrase, then it will generate a 256-bit key ([CryptoJS, 2019](https://cryptojs.gitbook.io/docs)).
+
+## Key
 In this case, CryptoJs derives a 32 byte long encryption key for AES-256 and a 16 byte long initialization vector (iv) from the password, encrypts the "Message" using this key, iv in AES mode CBC and (default) padding Pkcs7 [(Michael Fehr, 2020)](https://stackoverflow.com/a/64802091)
 
 
