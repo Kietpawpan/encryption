@@ -125,9 +125,10 @@ setTimeout(function () {
 document.getElementById('t1').value = encrypted;
 document.getElementById('t1').style.height = document.getElementById('t1').scrollHeight + 'px';}, d*29); 
 
-setTimeout(){
-	load.style.dislay="none";
-}, d*35);
+setTimeout(function(){
+	document.getElementById('aes').innerHTML="<button class='btn' onclick='clearThis()'>DELETE</button>";
+	function clearThis (){load.style.dislay="none";
+}, d*30);
 }
 
 
