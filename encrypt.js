@@ -339,4 +339,3 @@ myInput.onkeyup = function() {
 
 }
 
-
