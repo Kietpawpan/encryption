@@ -68,11 +68,79 @@ function setPaste() {
 
 
 function enc(){ /* crypto-js 4.2.0 */
-var message = document.getElementById('data1').value;
+document.getElementById("para").style.display = "block";
+document.getElementById('t1').value="";
+var plaintext = document.getElementById('data1').value;
 var key = document.getElementById('key1').value;
-var encrypted = CryptoJS.AES.encrypt(message, key);
+var encrypted = CryptoJS.AES.encrypt(plaintext, key);
+var load = document.getElementById('para');
+/* document.getElementById('aes').scrollIntoView({behavior: 'smooth'});*/ 
+load.innerHTML ="Loading.";
+var d = 300;
+setTimeout(function () {
+load.innerHTML ="Loading..";}, d);
+
+setTimeout(function () {
+load.innerHTML ="Loading...";}, d*2);
+
+setTimeout(function () {
+load.innerHTML ="Loading....";}, d*4);
+
+setTimeout(function () {
+load.innerHTML ="ENCRYPT 72 v 1.0.0";}, d*6);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan";}, d*7);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS";}, d*8);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  ";}, d*9);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key;}, d*10);
+
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: ";}, d*11);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv;}, d*12);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: ";}, d*13);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt;}, d*14);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt + " AES-256 implementation with Crypto-js v 4.0.0";}, d*15);
+
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt + " AES-256 implementation with Crypto-js v 4.0.0 Encrypting ";}, d*16);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt + " AES-256 implementation with Crypto-js v 4.0.0 Encrypting.";}, d*18);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt + " AES-256 implementation with Crypto-js v 4.0.0 Encrypting..";}, d*20);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt + " AES-256 implementation with Crypto-js v 4.0.0 Encrypting...";}, d*22);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt + " AES-256 implementation with Crypto-js v 4.0.0 Sucessfully encrypted.";}, d*28);
+
+setTimeout(function () {
+load.innerHTML = "ENCRYPT 72 v 1.0.0 Copyright &copy; 2024 Monte Kietpawpan ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt + " AES-256 implementation with Crypto-js v 4.0.0 Sucessfully encrypted: " + encrypted;}, d*29);
+
+
+setTimeout(function () {
 document.getElementById('t1').value = encrypted;
-document.getElementById('t1').style.height = document.getElementById('t1').scrollHeight + 'px'; 
+document.getElementById('t1').style.height = document.getElementById('t1').scrollHeight + 'px';}, d*29); 
+
 }
 
 
@@ -176,18 +244,9 @@ document.getElementById('data3').value ="";
 document.getElementById('data4').value ="";
 document.getElementById('data1').value ="";
 document.getElementById('bit').innerHTML ="";
+document.getElementById("message").style.display = "none";
+document.getElementById('para').style.display = "none";
 }
-
-
-function clearHash(){
-document.getElementById('data5').value ="";
-document.getElementById('data4').value ="";
-}
-
-function clearGuid(){
-document.getElementById('data6').value ="";
-}
-
 
 
 function guid(){
@@ -218,5 +277,80 @@ else {
 /*http://stackoverflow.com/a/12206089/993683 
 by @broofa)*/
 
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_password_val */
+var myInput = document.getElementById("key1");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+var sp = document.getElementById("sp");
+
+// When the user clicks on the password field, show the message box
+myInput.oninput = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
   
- 
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+
+  // Validate numbers
+  var numbers = /[0-9]/g; 
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+
+
+ // Validate special letters
+    var spc = /[^a-zA-Z0-9]+/g;
+    if(myInput.value.match(spc)) {  
+    sp.classList.remove("invalid");
+    sp.classList.add("valid");
+  } else {
+    sp.classList.remove("valid");
+    sp.classList.add("invalid");
+  }
+
+
+}
+
+
