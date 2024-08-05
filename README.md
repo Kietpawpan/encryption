@@ -59,11 +59,9 @@ NoPadding
 ```
 
 ### The Cipher Input
-For the plaintext message (your classified information--my comment), the cipher algorithms accept either strings or instances of CryptoJS.lib.WordArray.
-
-For the secret key, when you pass a string, it's treated as a passphrase and used to derive an actual key and IV. 
-
-However, if you pass a WordArray (the actual key), you must also pass the actual IV.
+For ENCRYPT 72
+1. The __plaintext__ can be either strings or instances of CryptoJS.lib.WordArray.
+2. The __secret key__, must be a string, treated as a passphrase and used to derive an actual key and IV. 
 
 
 ### The Cipher Output
@@ -88,7 +86,7 @@ encrypted
 ```
 
 ## Key
-In this case, CryptoJs derives a 32 byte long encryption key for AES-256 and a 16 byte long initialization vector (iv) from the password, encrypts the "Message" using this key, iv in AES mode CBC and (default) padding Pkcs7 [(Michael Fehr, 2020)](https://stackoverflow.com/a/64802091)
+CryptoJs derives a 32 byte long encryption key for AES-256 and a 16 byte long initialization vector (iv) from the password, encrypts the "Message" using this key, iv in AES mode CBC and (default) padding Pkcs7 [(Michael Fehr, 2020)](https://stackoverflow.com/a/64802091)
 
 
 You need a 32 bytes key for AES-256. An Utf-8 encoding of the string c79109c462c34441840551e2ba79830e is one way to create such a 32 bytes sequence. CryptoJS provides the Utf8 encoder for this purpose. Keys generated this way have a reduced value range of 16 instead of 256 values per byte ([Topaco, 2023](https://stackoverflow.com/questions/76066950/why-do-we-use-cryptojs-enc-utf8-parse-in-javascript
