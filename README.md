@@ -17,7 +17,7 @@ FC-->RK
 B-->D
 
 ```
-[ENCRYPT 72](https://kietpawpan.github.io/encryption) gets a private key as password/passphrase, e.g., "your private key", to the crypto-js function:
+[ENCRYPT 72](https://kietpawpan.github.io/encryption) gets a secret key as password/passphrase to the crypto-js function:
 
 ```
 CryptoJS.AES.encrypt("Message", "your private key");
