@@ -127,7 +127,7 @@ document.getElementById('t1').style.height = document.getElementById('t1').scrol
 
 setTimeout(function(){
 	document.getElementById('aes').innerHTML="<button class='btn' onclick='clearThis()'>DELETE</button>";
-	function clearThis (){load.style.dislay="none";
+	function clearThis (){load.style.dislay="none";}
 }, d*30);
 }
 
