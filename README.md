@@ -24,12 +24,75 @@ CryptoJS.AES.encrypt("Message", "your private key");
 ```
 
 ## AES
+According to [CryptoJS (2019)](https://cryptojs.gitbook.io/docs), 
+
 The Advanced Encryption Standard (AES) is a U.S. Federal Information Processing Standard (FIPS). It was selected after a 5-year process where 15 competing designs were evaluated.
 ```
 var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
 ​var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
 ```
-CryptoJS supports AES-128, AES-192, and AES-256. It will pick the variant by the size of the key you pass in. If you use a passphrase, then it will generate a 256-bit key ([CryptoJS, 2019](https://cryptojs.gitbook.io/docs)).
+CryptoJS supports AES-128, AES-192, and AES-256. It will pick the variant by the size of the key you pass in. If you use a passphrase, then it will generate a 256-bit key 
+Block Modes and Padding
+Copy
+var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase", {
+  mode: CryptoJS.mode.CFB,
+  padding: CryptoJS.pad.AnsiX923
+});
+CryptoJS supports the following modes:
+
+CBC (the default)
+
+CFB
+
+CTR
+
+OFB
+
+ECB
+
+And CryptoJS supports the following padding schemes:
+
+Pkcs7 (the default)
+
+Iso97971
+
+AnsiX923
+
+Iso10126
+
+ZeroPadding
+
+NoPadding
+
+The Cipher Input
+For the plaintext message, the cipher algorithms accept either strings or instances of CryptoJS.lib.WordArray.
+
+For the key, when you pass a string, it's treated as a passphrase and used to derive an actual key and IV. Or you can pass a WordArray that represents the actual key. If you pass the actual key, you must also pass the actual IV.
+
+For the ciphertext, the cipher algorithms accept either strings or instances of CryptoJS.lib.CipherParams. A CipherParams object represents a collection of parameters such as the IV, a salt, and the raw ciphertext itself. When you pass a string, it's automatically converted to a CipherParams object according to a configurable format strategy.
+
+The Cipher Output
+The plaintext you get back after decryption is a WordArray object. See Hashing's Output for more detail.
+
+The ciphertext you get back after encryption isn't a string yet. It's a CipherParams object. A CipherParams object gives you access to all the parameters used during encryption. When you use a CipherParams object in a string context, it's automatically converted to a string according to a format strategy. The default is an OpenSSL-compatible format.
+
+Copy
+var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
+​
+encrypted.key
+> "74eb593087a982e2a6f5dded54ecd96d1fd0f3d44a58728cdcd40c55227522223 ";
+​
+encrypted.iv
+> "7781157e2629b094f0e3dd48c4d786115";
+​
+encrypted.salt
+> "7a25f9132ec6a8b34";
+​
+encrypted.ciphertext
+> "73e54154a15d1beeb509d9e12f1e462a0";
+​
+encrypted
+> "U2FsdGVkX1+iX5Ey7GqLND5UFUoV0b7rUJ2eEvHkYqA=";
 
 ## Key
 In this case, CryptoJs derives a 32 byte long encryption key for AES-256 and a 16 byte long initialization vector (iv) from the password, encrypts the "Message" using this key, iv in AES mode CBC and (default) padding Pkcs7 [(Michael Fehr, 2020)](https://stackoverflow.com/a/64802091)
