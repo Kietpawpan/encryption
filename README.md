@@ -66,6 +66,7 @@ For ENCRYPT 72
 
 ### The Cipher Output
 The plaintext you get back after decryption is a WordArray object. The default is an OpenSSL-compatible format.
+You can access to all the parameters used during encryption: 
 ```
 var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
 ​
