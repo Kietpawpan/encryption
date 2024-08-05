@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap">
-
+<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
 <style>
 body,h1,h2,h3,h4,h5 {
 	font-family: "Raleway", sans-serif
@@ -84,6 +84,76 @@ font-family:"Kanit";
         text-indent:-1.5em;
 }
 
+/*PASSWORD CHECK*/
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Style the container for inputs */
+.container {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field 
+https://www.w3schools.com/howto/howto_js_password_validation.asp
+*/
+
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#para {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
 
 </style>
 
@@ -136,16 +206,27 @@ font-family:"Kanit";
 
 <div class="myapp">
 <textarea 	
+	type="password" 
+	name="psw" 
+	pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+	title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
 	oninput="setHx()" 
 	type="text" 
 	id="key1" 
-	placeholder="Private key*" 
+	placeholder="Secret key*" 
 	required 
 	style="margin-top:5px;">
 </textarea>
+
+<div id="message">
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="sp" class="invalid">A <b>special character</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
 </div>
 
-<div class="myapp" id='bit'><font color="grey">*Password หรือ Passphrase</font></div>
+</div>
 
 <!--
 <div class="myapp">
@@ -159,7 +240,7 @@ font-family:"Kanit";
 </div>
 -->
 
-<div class="myapp">
+<div class="myapp" id="aes">
 <p float="right">
 <button id="enc"
 	class="btn"
@@ -174,18 +255,34 @@ font-family:"Kanit";
 </p>
 </div>
 
-<div class="myapp">
+
+<textarea
+
+	id="para" 
+	style="	color:white;
+		background-color:black;
+		padding:20px 0px 20px 10px;
+		font-family: 'VT323';font-size: 22px;
+		overflow:hidden;"
+	rows="8">
+</textarea>
+
+
+<div class="myapp" id="out">
 <p align="left">
 <b>
 Encrypted:
 </b>
 </p>
+
 <textarea id="t1" 
 	style="width=100%"
 	placeholder="Output/Ciphertext"
 	oninput="setH()">
 </textarea>
 </div>
+<br>
+
 
 <br>
 <div class="myapp" 
@@ -235,7 +332,7 @@ Encrypted:
 <textarea 
 	oninput="setH()" 
 	type="text" id="key2" 
-	placeholder="Private key" 
+	placeholder="Secret key" 
 	required 
 	style="margin-top:5px;">
 </textarea>
