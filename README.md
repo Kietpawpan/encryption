@@ -10,8 +10,8 @@ flowchart TD
     C2[Same secret key]-->G[DECRYPTION]-->I[Same plaintext]-->F
      FN-->G
 A-->C-->D
-RK[round keys]-->D
-AK-->RKL[round key length]-->RN[Round Number\n14 rounds for 256 bits\nAES-256]-->D
+RK[Round keys]-->D
+AK-->RKL[Round key length]-->RN[Round Number\n14 rounds for 256 bits\nAES-256]-->D
 FC[Nonlinear data \ntransforming function]
 FC-->RK
 FC-->SL[Salt]-->D
