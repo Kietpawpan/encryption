@@ -5,7 +5,7 @@
 ```mermaid
 flowchart TD
     A[Sender] --> B[Plaintext]-->FC
-    C[Secret key]--Validation--PBKDF2-->AK[Acutal key\n512 bits]-->FC-->D[SYMMETRIC\nENCRYPTION]-->FC
+    C[Secret key]--PBKDF2-->AK[Acutal key\n512 bits]-->FC-->D[SYMMETRIC\nENCRYPTION]-->FC
     FN[Ciphertext at Round 14\nAES-256 Encrypted]-->F[Recipient]
     C2[Same secret key]-->G[DECRYPTION]-->I[Same plaintext]-->F
      FN-->G
