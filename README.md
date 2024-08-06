@@ -24,8 +24,8 @@ ENCRYPT 72 gets a secret key as password/passphrase to the crypto-js function:
 ```
 CryptoJS.AES.encrypt("Message", "your private key");
 ```
-A strong password is validated by ENCRYPT 72:
--  A lowercase lette
+A password is always validated by ENCRYPT 72 to check whther it is a strong one, which contains:
+-  A lowercase letter
 -  A capital (uppercase) letter
 -  A number
 -  A special characters
