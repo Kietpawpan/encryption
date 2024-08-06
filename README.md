@@ -24,6 +24,12 @@ ENCRYPT 72 gets a secret key as password/passphrase to the crypto-js function:
 ```
 CryptoJS.AES.encrypt("Message", "your private key");
 ```
+A strong password is validated by ENCRYPT 72:
+-  A lowercase lette
+-  A capital (uppercase) letter
+-  A number
+-  A special characters
+-  Minimum 8 characters
 
 ## AES
 ENCRYPT 72 supports AES-256 (TOP SECRET). A secret key will generate a 256-bit key. 
