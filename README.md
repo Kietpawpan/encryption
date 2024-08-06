@@ -1,7 +1,7 @@
 # Encryption:
 ## A Web App for Advanced Encryption Standard Implementation
 
-[ENCRYPT 72](https://kietpawpan.github.io/encryption) is a web app for implementing Advanced Encryption Standard (AES) with Crypto-js (v  4.0.0). AES is the most secure encryption algorithm in 2024 and probably in decades ahead. AES in ENCRYPT 72 works as follows:
+[ENCRYPT 72](https://kietpawpan.github.io/encryption) is a web app for implementing Advanced Encryption Standard (AES) with [CryptoJS (2019)](https://cryptojs.gitbook.io/docs) (v  4.0.0). AES is the most secure encryption algorithm in 2024 and probably in decades ahead. AES in ENCRYPT 72 works as follows:
 ```mermaid
 flowchart TD
     A[Sender] --> B[Plaintext]-->FC
@@ -26,9 +26,7 @@ CryptoJS.AES.encrypt("Message", "your private key");
 ```
 
 ## AES
-According to [CryptoJS (2019)](https://cryptojs.gitbook.io/docs), 
-
-CryptoJS supports AES-128, AES-192, and AES-256. It will pick the variant by the size of the key you pass in. If you use a passphrase, then it will generate a 256-bit key. 
+ENCRYPT 72 supports AES-256 (TOP SECRET). A secret key will generate a 256-bit key. 
 ```
 var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
 ​var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
