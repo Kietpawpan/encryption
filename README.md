@@ -6,7 +6,7 @@
 flowchart TD
     A[Sender] --> B[Plaintext]-->FC
     C[Secret key]--PBKDF2-->AK[Acutal key\n512 bits]-->FC-->D[SYMMETRIC\nENCRYPTION]-->FC
-    FN[10th, 12nd, or 14th round ciphertext]-->F[Recipient]
+    FN[Ciphertext at Round 14]-->F[Recipient]
     C2[Same secret key]-->G[DECRYPTION]-->I[Same plaintext]-->F
      FN-->G
 A-->C-->D
