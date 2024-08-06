@@ -39,24 +39,7 @@ var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase", {
   padding: CryptoJS.pad.AnsiX923
 });
 ```
-CryptoJS supports the following modes:
-```
-CBC (the default)
-CFB
-CTR
-OFB
-ECB
-```
-
-And the following padding schemes:
-```
-Pkcs7 (the default)
-Iso97971
-AnsiX923
-Iso10126
-ZeroPadding
-NoPadding
-```
+ENCRYPT 72 supports __CBC__ mode and use __Pkcs7__ padding scheme.
 
 ### The Cipher Input
 For ENCRYPT 72
@@ -66,7 +49,7 @@ For ENCRYPT 72
 
 ### The Cipher Output
 The plaintext you get back after decryption is a WordArray object. The default is an OpenSSL-compatible format.
-You can access to all the parameters used during encryption: 
+ENCRYPT 72 allows you access to all the parameters used during encryption, namely actual key, iv, salt, and ciphertext.
 ```
 var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
 ​
@@ -86,13 +69,3 @@ encrypted
 > "U2FsdGVkX1+iX5Ey7GqLND5UFUoV0b7rUJ2eEvHkYqA=";
 ```
 
-## Key
-CryptoJs derives a 32 byte long encryption key for AES-256 and a 16 byte long initialization vector (iv) from the password, encrypts the "Message" using this key, iv in AES mode CBC and (default) padding Pkcs7 [(Michael Fehr, 2020)](https://stackoverflow.com/a/64802091)
-
-
-You need a 32 bytes key for AES-256. An Utf-8 encoding of the string c79109c462c34441840551e2ba79830e is one way to create such a 32 bytes sequence. CryptoJS provides the Utf8 encoder for this purpose. Keys generated this way have a reduced value range of 16 instead of 256 values per byte ([Topaco, 2023](https://stackoverflow.com/questions/76066950/why-do-we-use-cryptojs-enc-utf8-parse-in-javascript
-)). 
-
-
-You should never need Utf8.parse for a key. The key should not be a character string, unless it is hex or base 64 encoded ([Maarten Bodewes, 2023](https://stackoverflow.com/questions/76066950/why-do-we-use-cryptojs-enc-utf8-parse-in-javascript
-)). 
