@@ -5,7 +5,7 @@
 ```mermaid
 flowchart TD
     A[Sender] --> B[plaintext]-->FC
-    C[secret key]-->AK[acutal key\n512 bits]-->FC-->D[ENCRYPTION]-->E[ciphertext]-->D
+    C[secret key]--PBKDF2-->AK[acutal key\n512 bits]-->FC-->D[ENCRYPTION]-->E[ciphertext]-->D
     E-->FN[10th, 12nd, or 14th round ciphertext]-->F[Recipient]
     C2[same secret key]-->G[DECRYPTION]-->I[same plaintext]-->F
      FN-->G
