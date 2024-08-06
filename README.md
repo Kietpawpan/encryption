@@ -19,7 +19,7 @@ FC-->iv[iv]-->D
 FC-->CFT[Ciphertext]-->D
 CFT-->FN
 ```
-[ENCRYPT 72](https://kietpawpan.github.io/encryption) gets a secret key as password/passphrase to the crypto-js function:
+ENCRYPT 72 gets a secret key as password/passphrase to the crypto-js function:
 
 ```
 CryptoJS.AES.encrypt("Message", "your private key");
