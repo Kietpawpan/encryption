@@ -155,6 +155,10 @@ https://www.w3schools.com/howto/howto_js_password_validation.asp
   content: "✖";
 }
 
+#cursor {
+  font-size: 30px;
+}
+
 </style>
 
 </head>
@@ -218,13 +222,6 @@ https://www.w3schools.com/howto/howto_js_password_validation.asp
 	style="margin-top:5px;">
 </textarea>
 
-<div id="message">
-  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-  <p id="number" class="invalid">A <b>number</b></p>
-  <p id="sp" class="invalid">A <b>special character</b></p>
-  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-</div>
 
 </div>
 
@@ -254,18 +251,26 @@ https://www.w3schools.com/howto/howto_js_password_validation.asp
 </button>
 </p>
 </div>
+<div id="message">
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="sp" class="invalid">A <b>special character</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
 
 
-<textarea
+<div
 
 	id="para" 
 	style="	color:white;
 		background-color:black;
 		padding:20px 0px 20px 10px;
 		font-family: 'VT323';font-size: 22px;
-		overflow:hidden;"
+		overflow:hidden;height:300px;"
+	
 	rows="8">
-</textarea>
+</div>
 
 
 <div class="myapp" id="out">
