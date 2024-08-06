@@ -1,7 +1,7 @@
 # Encryption:
 ## A Web App for Advanced Encryption Standard Implementation
 
-[ENCRYPT 72](https://kietpawpan.github.io/encryption) implements Advanced Encryption Standard (AES) with Crypto-js (v  4.0.0), the most secure encryption algorithm in 2024 and probably in decades ahead. AES in ENCRYPT 72 works as follows:
+[ENCRYPT 72](https://kietpawpan.github.io/encryption) is a web app for implementing Advanced Encryption Standard (AES) with Crypto-js (v  4.0.0), the most secure encryption algorithm in 2024 and probably in decades ahead. AES in ENCRYPT 72 works as follows:
 ```mermaid
 flowchart TD
     A[Sender] --> B[Plaintext]-->FC
