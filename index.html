@@ -249,6 +249,16 @@ https://www.w3schools.com/howto/howto_js_password_validation.asp
 	</i>
 			ENCRYPT
 </button>
+
+<button class="btn"
+	style="margin-top:5px;
+	margin-bottom:10px;"
+	onclick="clearAll()">
+		<i class="fa fa-trash ">
+		</i>
+			CLEAR
+</button>
+
 </p>
 </div>
 <div id="message">
@@ -267,7 +277,11 @@ https://www.w3schools.com/howto/howto_js_password_validation.asp
 		background-color:black;
 		padding:20px 0px 20px 10px;
 		font-family: 'VT323';font-size: 22px;
-		overflow:hidden;height:300px;"
+		overflow:hidden;
+	oninput="setH"
+
+<!height:500px;">
+
 	
 	rows="8">
 </div>
@@ -381,15 +395,6 @@ Decrypted:
 
 <div class="myapp">
 
-<button class="btn"
-	style="margin-top:5px;
-	float:right;
-	margin-bottom:10px;"
-	onclick="clearAll()">
-		<i class="fa fa-trash ">
-		</i>
-			CLEAR
-</button>
 </div>
 <br><br>
 <div class="myapp">
