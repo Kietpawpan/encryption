@@ -1,13 +1,13 @@
 # Encryption:
 ## A Web App for Advanced Encryption Standard Implementation
 
-[ENCRYPT 72](https://kietpawpan.github.io/encryption) adopts Advanced Encryption Standard (AES), the most secure encryption algorithm in 2024 and probably in decades ahead. AES works as follows:
+[ENCRYPT 72](https://kietpawpan.github.io/encryption) adopts Advanced Encryption Standard (AES), the most secure encryption algorithm in 2024 and probably in decades ahead. AES in ENCRYPT 72 works as follows:
 ```mermaid
 flowchart TD
     A[Sender] --> B[plaintext]-->FC
-    C[private key]-->FC-->D[ENCRYPTION]-->E[ciphertext]-->D
+    C[secret key]-->FC-->D[ENCRYPTION]-->E[ciphertext]-->D
     E-->FN[10th, 12nd, or 14th round\nciphertext]-->F[Recipient]
-    C2[same private key]-->G[DECRYPTION]-->I[same plaintext]-->F
+    C2[same secret key]-->G[DECRYPTION]-->I[same plaintext]-->F
      FN-->G
 A-->C-->D
 RK[round keys]-->D
