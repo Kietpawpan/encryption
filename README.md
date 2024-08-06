@@ -11,7 +11,7 @@ flowchart TD
      FN-->G
 A-->C-->D
 RK[round keys]-->D
-AK-->RKL[round key length]-->RN[Round Number\n10 rounds for 128 bits\n12 rounds for 192 bits\n14 rounds for 256 bits]-->D
+AK-->RKL[round key length]-->RN[Round Number\n14 rounds for 256 bits\nAES-256]-->D
 FC[Nonlinear data \ntransforming function]
 FC-->RK
 FC-->SL[Salt]-->D
