@@ -4,15 +4,15 @@
 [ENCRYPT 72](https://kietpawpan.github.io/encryption) adopts Advanced Encryption Standard (AES), the most secure encryption algorithm in 2024 and probably in decades ahead. AES in ENCRYPT 72 works as follows:
 ```mermaid
 flowchart TD
-    A[Sender] --> B[plaintext]-->FC
-    C[secret key]--PBKDF2-->AK[acutal key\n512 bits]-->FC-->D[ENCRYPTION]-->E[ciphertext]-->D
+    A[Sender] --> B[Plaintext]-->FC
+    C[Secret key]--PBKDF2-->AK[Acutal key\n512 bits]-->FC-->D[ENCRYPTION]-->E[Ciphertext]-->D
     E-->FN[10th, 12nd, or 14th round ciphertext]-->F[Recipient]
-    C2[same secret key]-->G[DECRYPTION]-->I[same plaintext]-->F
+    C2[Same secret key]-->G[DECRYPTION]-->I[Same plaintext]-->F
      FN-->G
 A-->C-->D
 RK[round keys]-->D
 C-->RKL[round key length]-->RN[Round Number\n10 rounds for 128 bits\n12 rounds for 192 bits\n14 rounds for 256 bits]-->D
-FC[nonlinear data \nmodifying function]
+FC[Nonlinear data \ntransforming function]
 FC-->RK
 B-->D
 
