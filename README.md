@@ -15,9 +15,9 @@ C-->RKL[round key length]-->RN[Round Number\n10 rounds for 128 bits\n12 rounds f
 FC[Nonlinear data \ntransforming function]
 FC-->RK
 B-->D
-C-->SL[Salt]-->FC
-C-->iv[iv]-->FC
-
+FC-->SL[Salt]-->D
+FC-->iv[iv]-->D
+FC-->Cipher[CF]-->D
 ```
 [ENCRYPT 72](https://kietpawpan.github.io/encryption) gets a secret key as password/passphrase to the crypto-js function:
 
