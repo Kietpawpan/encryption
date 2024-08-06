@@ -14,7 +14,6 @@ RK[round keys]-->D
 C-->RKL[round key length]-->RN[Round Number\n10 rounds for 128 bits\n12 rounds for 192 bits\n14 rounds for 256 bits]-->D
 FC[Nonlinear data \ntransforming function]
 FC-->RK
-B-->D
 FC-->SL[Salt]-->D
 FC-->iv[iv]-->D
 FC-->CFT[Ciphertext]-->D
