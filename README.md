@@ -17,7 +17,7 @@ FC-->RK
 B-->D
 FC-->SL[Salt]-->D
 FC-->iv[iv]-->D
-FC-->Cipher[CF]-->D
+FC-->CFT[Ciphertext]-->D
 ```
 [ENCRYPT 72](https://kietpawpan.github.io/encryption) gets a secret key as password/passphrase to the crypto-js function:
 
