@@ -54,8 +54,8 @@ For ENCRYPT 72
 
 
 ### The Cipher Output
-The plaintext you get back after decryption is a WordArray object. The default is an OpenSSL-compatible format.
-ENCRYPT 72 allows you access to all the parameters used during encryption, namely actual key, iv, salt, and ciphertext.
+The plaintext you get back after decryption is a WordArray object in an OpenSSL-compatible format.
+ENCRYPT 72 also allows you access to all the parameters used during encryption, namely actual key, iv, salt, and ciphertext in a classic DOS style.
 ```
 var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
 ​
