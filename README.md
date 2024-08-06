@@ -1,7 +1,7 @@
 # Encryption:
 ## A Web App for Advanced Encryption Standard Implementation
 
-Advanced Encryption Standard (AES) is the most secure encryption algorithm nowsaday.
+[ENCRYPT 72](https://kietpawpan.github.io/encryption) adopts Advanced Encryption Standard (AES), the most secure encryption algorithm in 2024 and probably in decades ahead. AES works as follows:
 ```mermaid
 flowchart TD
     A[Sender] --> B[plaintext]-->FC
