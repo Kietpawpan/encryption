@@ -24,37 +24,40 @@ ENCRYPT 72 gets a secret key as password/passphrase to the crypto-js function:
 ```
 CryptoJS.AES.encrypt("Message", "your private key");
 ```
-A password is always validated by ENCRYPT 72 to check whther it is a strong one, which contains:
+The strength of you password/passphrase is always validated by ENCRYPT 72 by checking the present of:
 -  A lowercase letter
 -  A capital (uppercase) letter
 -  A number
 -  A special characters
+-  A space
 -  Minimum 8 characters
 
 ## AES
-ENCRYPT 72 supports AES-256 (TOP SECRET). A secret key will generate a 256-bit key. 
+ENCRYPT 72 supports only AES-256 (TOP SECRET). A secret key will generate a 256-bit key as the actual key. 
 ```
 var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
 ​var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
 ```
 
 ### Block Modes and Padding
+ENCRYPT 72 supports __CBC__ mode and use __Pkcs7__ padding scheme.
 ```
 var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase", {
-  mode: CryptoJS.mode.CFB,
-  padding: CryptoJS.pad.AnsiX923
+  /* mode: CryptoJS.mode.CBC,
+  padding: CryptoJS.pad.Pkcs7 */
 });
 ```
-ENCRYPT 72 supports __CBC__ mode and use __Pkcs7__ padding scheme.
+
 
 ### The Cipher Input
 For ENCRYPT 72
-1. The __plaintext__ can be either strings or instances of CryptoJS.lib.WordArray.
-2. The __secret key__, must be a string, treated as a passphrase and used to derive an actual key and IV. 
+1. The __plaintext__ is a string (or strings).
+2. The __secret key__, must be a string, treated as a passphrase and used to derive an actual key, salt and iv. 
 
 
 ### The Cipher Output
 The plaintext you get back after decryption is a WordArray object in an OpenSSL-compatible format.
+
 ENCRYPT 72 also allows you access to all the parameters used during encryption, namely actual key, iv, salt, and ciphertext in a classic DOS style.
 ```
 var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
