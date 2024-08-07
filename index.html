@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!Copyright (C) 2024 Monte Kietpwpan>
+<!ENCRYPT 72 Copyright (C) 2024 Monte Kietpwpan | v 1.0.0 August 7, 2024>
 
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -9,7 +9,7 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="css">
+<link rel="stylesheet" href="encrypt.css">
 <link rel="stylesheet" href="font-awesome.min.css">
 <link rel="stylesheet" href="./MNRE _ Carbon_files/css(1)">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,46 +17,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap">
 <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+
 <style>
-body,h1,h2,h3,h4,h5 {
-	font-family: "Raleway", sans-serif
-}
-
-body{
-	overflow-x: hidden;
-}
-
-textarea{
-  width:100%;
-  font-size:35px;
-
-}
-
-textarea:focus {
-  outline: none;
-}
-
-textarea::placeholder{
-	font-size:25px;
-}
-
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 16px;
-  font-size:;
-  cursor: pointer;
-  border-radius:5px;
-  font-family:"Noto Sans Thai", sans-serif;
-}
-
-
-.btn:hover {
-  background-color: RoyalBlue;
-}
-
-
 .fa-clone{
  font-size:60px;!important;
  color:grey;
@@ -73,90 +35,6 @@ textarea::placeholder{
 
 .fa-paste:hover{
    color:RoyalBlue!important;
-}
-
-.myapp{
-font-family:"Kanit";
-}
-
-.ref{
-        padding-left: 1.5em;
-        text-indent:-1.5em;
-}
-
-/*PASSWORD CHECK*/
-input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-}
-
-/* Style the submit button */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-}
-
-/* Style the container for inputs */
-.container {
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* The message box is shown when the user clicks on the password field 
-https://www.w3schools.com/howto/howto_js_password_validation.asp
-*/
-
-#message {
-  display:none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-#para {
-  display:none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-
-#message p {
-  padding: 10px 35px;
-  font-size: 18px;
-}
-
-.valid {
-  color: green;
-}
-
-.valid:before {
-  position: relative;
-  left: -35px;
-  content: "✔";
-}
-
-.invalid {
-  color: red;
-}
-
-.invalid:before {
-  position: relative;
-  left: -35px;
-  content: "✖";
-}
-
-#cursor {
-  font-size: 30px;
 }
 
 </style>
@@ -194,8 +72,8 @@ https://www.w3schools.com/howto/howto_js_password_validation.asp
 	Advanced Encryption Standard
 	</b>
       </h3>
-      <h5><span class="w3-opacity" style="padding-top:20px;"><font size="+2">โปรแกรม ENCRYPT 72 ใช้สำหรับเข้ารหัสข้อมูล ด้วยวิธี Advanced Encryption Standard (AES) เพื่อคุ้มครองข้อมูลข่าวสารที่มีชั้นความลับ ระดับลับ (CONFIDENTIAL) ลับมาก (SECRET) และลับที่สุด (TOP SECRET) รายละเอียดตามนโยบายและข้อเสนอแนะของคณะกรรมการด้านระบบความปลอดภัยแห่งชาติ (<a style="text-decoration:none;" href="cnss15fs.pdf">Committee on National Security Systems: CNSS</a>) และสำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของประเทศสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
-">Cybersecurity and Infrastructure Security Agency</a>) ทั้งนี้ AES ได้เข้ามาตรฐาน ISO/IEC 18033-3
+      <h5><span class="w3-opacity" style="padding-top:20px;"><font size="+2">โปรแกรมนี้ ใช้เข้ารหัสข้อมูล ด้วยวิธี <a style="text-decoration:none;" href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf"><b>Advanced Encryption Standard (AES)</b></a> ของสำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของประเทศสหรัฐอเมริกา (<a style="text-decoration:none;" href="https://www.cisa.gov/sites/default/files/2024-05/23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
+">Cybersecurity and Infrastructure Security Agency</a>) ซึ่งเป็นมาตรฐาน ISO/IEC 18033-3 ทั้งนี้ เพื่อคุ้มครองข้อมูลข่าวสารลับ ระดับ TOP SECRET (<font color="red"><b>ลับที่สุด</b></font>)
 </span><br><br>
 
 <div class="myapp">
@@ -217,7 +95,7 @@ https://www.w3schools.com/howto/howto_js_password_validation.asp
 	oninput="setHx()" 
 	type="text" 
 	id="key1" 
-	placeholder="Secret key*" 
+	placeholder="Secret key" 
 	required 
 	style="margin-top:5px;">
 </textarea>
@@ -266,10 +144,41 @@ https://www.w3schools.com/howto/howto_js_password_validation.asp
   <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
   <p id="number" class="invalid">A <b>number</b></p>
   <p id="sp" class="invalid">A <b>special character</b></p>
+  <p id="sa" class="invalid">A <b>space</b></p>
   <p id="length" class="invalid">Minimum <b>8 characters</b></p>
 </div>
 
+<div class="myapp" id="out">
+<p align="left">
+<b>
+Encrypted:
+</b>
+</p>
 
+<textarea id="t1" 
+	style="width=100%"
+	placeholder="Output/Ciphertext"
+	oninput="setH()">
+</textarea>
+</div>
+
+
+<div class="myapp" 
+	style="float:left;">
+
+	<span id="c2">
+	<i
+	class='fa fa-clone' 
+	onclick="copy1()" 
+	style="float:left">
+	</i>
+	</span>
+</div>
+
+</p>
+<br><br>
+
+<div id="Report">Encryption Inputs:</div>
 <div
 
 	id="para" 
@@ -287,36 +196,6 @@ https://www.w3schools.com/howto/howto_js_password_validation.asp
 </div>
 
 
-<div class="myapp" id="out">
-<p align="left">
-<b>
-Encrypted:
-</b>
-</p>
-
-<textarea id="t1" 
-	style="width=100%"
-	placeholder="Output/Ciphertext"
-	oninput="setH()">
-</textarea>
-</div>
-<br>
-
-
-<br>
-<div class="myapp" 
-	style="float:left;">
-
-	<span id="c2">
-	<i
-	class='fa fa-clone' 
-	onclick="copy1()" 
-	style="float:left">
-	</i>
-	</span>
-</div>
-
-</p>
 
 <div class="myapp" style="font-size:40px;font-weight:bold;"><center>
 <br><hr><br>
@@ -400,9 +279,9 @@ Decrypted:
 <div class="myapp">
 <b>เทคนิคการเข้ารหัส</b><br>
 <ol>
-<li> private key ที่ใช้ล็อคและปลดล็อคข้อมูล มีความยาวเป็นบิท (bit) โดย 1 ตัวอักษร เท่ากับ 8 บิท หรือ 1 ไบต์ (byte) เช่น “a” คือ 01100001 ทั้งนี้ ความยาวของ private key จะเป็นตัวกำหนดความยาวของ round keys (กุญแจที่ใช้แปลงข้อมูลในแต่ละรอบ) ให้มีขนาด 128 บิท 192 บิท หรือ 256 บิท แล้วแต่กรณี และการเข้ารหัสจะใช้ข้อมูลต้นฉบับ (plaintext) ผสมกับ round key รอบละ 1 ดอก โดยมีการตัดข้อมูลเป็น block แต่ละ block ถูกตัดย่อยเป็นชิ้น ๆ แล้วสลับที่กัน ไม่ให้แปรผันแบบเส้นตรงกับข้อมูลเดิม (nonlinear complex modification) และมีการเปลี่ยน round key ทุกรอบ โดยที่จำนวนรอบการเข้ารหัส คือ 10 12 และ 14 รอบ สำหรับ round keys ขนาด 128 192 และ 256 บิท ตามลำดับ</li>
+<li> Secret key ที่ใช้ล็อคและปลดล็อคข้อมูล เป็นคำหรือวลีก็ได้ และควรคาดเดายาก คือ มี<font color="green">ตัวพิมพ์เล็ก / ตัวพิมพ์ใหญ่ / อักขระพิเศษ / ช่องว่าง / ตัวเลข / และมีอย่างน้อย 8 ตัว</font> ระบบจะแปลง คำหรือวลีนั้น เป็น actual key ขนาด 64 ไบต์ (512 บิท) และแปลงข้อมูลต้นฉบับ (plaintext) เป็นรหัสเลขฐานสอง (ciphertext) เพื่อผสมกับ key (round key) รอบละ 1 ดอก โดยมีการตัดข้อมูลเป็น block แต่ละ block ถูกตัดย่อยเป็นชิ้น ๆ แล้วสลับที่กัน ไม่ให้แปรผันแบบเส้นตรงกับข้อมูลเดิม (nonlinear complex modification) และมีการเปลี่ยน round key ทุกรอบ โดยที่จำนวนรอบการเข้ารหัส คือ 14 รอบ ซึ่งเป็นวิธีเข้ารหัสแบบ block cipher ที่มีความปลอดภัยสูงสุดในปัจจุบัน (AES-256)</li>
 
-<li>โปรแกรมนี้ใช้ crypto-js มาตรฐาน ในการเข้ารหัสแบบ AES โดยใช้ JavaScript Library จาก <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js เวอร์ชัน 4.2.0)</li>
+<li>โปรแกรมนี้ใช้ crypto-js.min.js ในการเข้ารหัสแบบ AES โหมด CBC และใช้ Pkcs7 padding scheme โดยอาศัย JavaScript Library จาก <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js เวอร์ชันล่าสุด 4.2.0)</li>
 
 <li>ในปี พ.ศ. 2567 สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
 ">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานรัฐบาลสหรัฐอเมริกา ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ แทนมาตรฐานเดิม (Data Encryption Standard หรือ DES)</li>
@@ -410,10 +289,10 @@ Decrypted:
 <li>คณะกรรมการด้านระบบความปลอดภัยแห่งชาติของประเทศสหรัฐอเมริกา (<a style="text-decoration:none;" href="cnss15fs.pdf">U.S. Committee on National Security Systems: CNSS</a>) มีนโยบายให้ใช้ AES เข้ารหัสข้อมูลข่าวสารลับ ระดับลับที่สุด (TOP  SECRET) โดยใช้ key ขนาด 192 หรือ 256 บิท ส่วน key ขนาด 128 บิท ใช้เข้ารหัสข้อมูลข่าวสารลับ ระดับลับมาก (SECRET) 
 </li>
 
-		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript แบบ <a style="text-decoration:none;" href="https://github.com/Kietpawpan/pdpa/tree/main/measures">open source</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากท่านลืม private key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา private key ได้อย่างถูกต้อง</font> </li>
+		<li>โปรแกรมนี้ เขียนด้วยภาษา HTML/JavaScript แบบ <a style="text-decoration:none;" href="https://github.com/Kietpawpan/pdpa/tree/main/measures">open source</a> ไม่มีการบันทึกข้อมูลที่เข้ารหัสไว้แต่อย่างใด <font color="red"> หากท่านลืม secret key และได้ทำลายข้อมูลต้นฉบับแล้ว จะไม่สามารถกู้ข้อมูลต้นฉบับได้ เว้นแต่จะคาดเดา secret key ถูกต้อง</font> </li>
 		
-		<li>ควรกำหนด private key ให้คาดเดาได้ยาก และเก็บเป็นความลับ ให้เข้าถึงได้เฉพาะผู้มีหน้าที่เกี่ยวข้องเท่านั้น</li>
-		<li>สำหรับ Developer หากจำเป็นต้องใช้ private key ใน source code ควรนำ private key นั้น มาทำการ hash แล้วบันทึก hashed text แทน โดยใช้ Secure Hash Algorithm (SHA) ที่ปลอดภัยสูง เช่น SHA3-512</li>
+		<li>ไม่ควรใช้ secret key แบบเดียวกัน ในการเข้ารหัสข้อมูลหลายชุด และต้องเก็บ secret key เป็นความลับ ให้เข้าถึงได้เฉพาะผู้มีหน้าที่เกี่ยวข้องเท่านั้น</li>
+		<li>สำหรับ Developer หากจำเป็นต้องใช้ secret key ใน source code ควรนำ secret key นั้น มาทำการ hash แล้วบันทึก hashed text แทน โดยใช้ Secure Hash Algorithm (SHA) ที่ปลอดภัยสูง เช่น SHA3-512</li>
 </ol>
 </div>
 <div class="myapp">
