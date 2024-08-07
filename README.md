@@ -50,8 +50,8 @@ var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase", {
 
 
 ### The Cipher Input
-For ENCRYPT 72
-1. The __plaintext__ is a string (or strings).
+ENCRYPT 72 is coded in UTF-8. So,
+1. The __plaintext__ is a UTF-8 string (or UTF-8 strings).
 2. The __secret key__, must be a string, treated as a passphrase and used to derive an actual key, salt and iv. 
 
 
