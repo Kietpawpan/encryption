@@ -11,10 +11,10 @@ $(document).on('input', 'textarea', function () {
 
 
 
-function enc(){
-aes = sha3_512(document.getElementById('key1').value);
-plaintext = document.getElementById('data1').value;
-var encrypted = CryptoJS.AES.encrypt(plaintext, aes);
+function c(){
+var a = sha3_512(document.getElementById('1').value);
+var plaintext = document.getElementById('n').value;
+var encrypted = CryptoJS.AES.encrypt(plaintext, a);
 document.getElementById('t1').value= encrypted;
 }
 
@@ -33,8 +33,8 @@ function copy1(){
 
 function clearAll(){
 document.getElementById('t1').value ="";
-document.getElementById('data1').value ="";
-document.getElementById('key1').value ="";
+document.getElementById('n').value ="";
+document.getElementById('1').value ="";
 
 }
 
