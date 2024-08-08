@@ -34,6 +34,8 @@ function copy1(){
 function clearAll(){
 document.getElementById('t1').value ="";
 document.getElementById('data1').value ="";
+document.getElementById('key1').value ="";
+
 }
 
 
