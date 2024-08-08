@@ -37,17 +37,17 @@ document.getElementById('data2').value ="";
 }
 
 function clearHash(){
-	document.getElementById('data4').value="";
-	document.getElementById('data5').value="";
+	document.getElementById('data3').value="";
+	document.getElementById('key2').value="";
 }
 
-function copy2(){
-  const element = document.querySelector("#data4");
+function copy3(){
+  const element = document.querySelector("#data3");
   element.select();
   element.setSelectionRange(0, 99999);
   document.execCommand('copy');
   element.setSelectionRange(0, 0);
-  var popup = document.getElementById("c4");
+  var popup = document.getElementById("c3");
   popup.innerHTML ="<b><font color='RoyalBlue'>Copied!</font></b>";
   setTimeout(function () {
   popup.innerHTML ="<i class='fa fa-clone' onclick='copy2()'></i>";}, 1200);
