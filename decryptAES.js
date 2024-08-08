@@ -34,12 +34,12 @@ function hash(){
 function clearAll(){
 document.getElementById('key2').value ="";
 document.getElementById('data2').value ="";
+document.getElementById('data3').value ="";
+document.getElementById('3').innerHTML ="";
+	
 }
 
-function clearHash(){
-	document.getElementById('data3').value="";
-	document.getElementById('key2').value="";
-}
+
 
 function copy3(){
   const element = document.querySelector("#data3");
