@@ -1,5 +1,5 @@
 /* Copyright (c) 2024 by Monte Kietpawpan
- * encrypt.js | v1.0.5 August 6, 2024 
+ * encrypt.js | v1.0.7 August 8, 2024 
  * MIT License */
 
 /* CURSUR : https://codepen.io/bharat-gupta/pen/gZMOQO */
@@ -68,63 +68,71 @@ var load = document.getElementById('para');
 /* document.getElementById('aes').scrollIntoView({behavior: 'smooth'});*/ 
 var d =500;
 var x = 300;
-load.innerHTML ="C:_";
+document.getElementById('Report').style.display ="block";
+document.getElementById('t1').value = encrypted;
+document.getElementById('t1').style.height = document.getElementById('t1').scrollHeight + 'px'; 
+
+
+load.innerHTML ="C: _";
 
 setTimeout(function () {
-load.innerHTML ="C:";}, d);
+load.innerHTML ="C: ";}, d);
 
 setTimeout(function () {
-load.innerHTML ="C:_";}, d+x);
+load.innerHTML ="C: _";}, d+x);
 
 setTimeout(function () {
-load.innerHTML ="C:";}, 2*x+d);
+load.innerHTML ="C: A";}, 1.5*x+d);
 
 setTimeout(function () {
-load.innerHTML ="C:_";}, 3*x+d);
+load.innerHTML ="C: AE";}, 2.0*x+d);
 
 setTimeout(function () {
-load.innerHTML ="C:Loading..._";}, 4*x+d);
+load.innerHTML ="C: AES-512";}, 2.5*x+d);
 
 setTimeout(function () {
-load.innerHTML ="C:Loading...";}, 5*x+d);
+load.innerHTML ="Loading..._";}, 4*x+d);
 
 setTimeout(function () {
-load.innerHTML ="C:Loading..._";}, 6*x+d);
+load.innerHTML ="Loading...";}, 5*x+d);
 
 setTimeout(function () {
-load.innerHTML ="C:Loading...";}, 7*x+d);
-
-
-setTimeout(function () {
-load.innerHTML ="C:Loading..._";}, 8*x+d);
+load.innerHTML ="Loading..._";}, 6*x+d);
 
 setTimeout(function () {
-load.innerHTML ="C:Loading...";}, 9*x+d);
-
-setTimeout(function () {
-load.innerHTML ="C:Loading..._";}, 10*x+d);
-
-setTimeout(function () {
-load.innerHTML ="C:Loading...";}, 11*x+d);
-
-setTimeout(function () {
-load.innerHTML ="C:Loading..._";}, 12*x+d);
-
-setTimeout(function () {
-load.innerHTML ="C:Loading...";}, 13*x+d);
-
-setTimeout(function () {
-load.innerHTML ="C:Loading..._";}, 14*x+d);
-
-setTimeout(function () {
-load.innerHTML ="C:Loading...";}, 15*x+d);
+load.innerHTML ="Loading...";}, 7*x+d);
 
 
 setTimeout(function () {
-load.innerHTML ="C: Cipher blocks prepared_";}, 16*x+d);
+load.innerHTML ="Loading ENCRYPT 72..._";}, 8*x+d);
 
 setTimeout(function () {
-load.innerHTML = "C: Ready.";}, 17*x+d);
+load.innerHTML ="Ciphertext is ready...";}, 9*x+d);
+
+setTimeout(function () {
+load.innerHTML ="Ciphertext is ready..._";}, 10*x+d);
+
+setTimeout(function () {
+load.innerHTML ="Ciphertext is ready...";}, 11*x+d);
+
+setTimeout(function () {
+load.innerHTML ="Key is ready..._";}, 12*x+d);
+
+setTimeout(function () {
+load.innerHTML ="Key is ready...";}, 13*x+d);
+
+setTimeout(function () {
+load.innerHTML ="Key is ready..._";}, 14*x+d);
+
+setTimeout(function () {
+load.innerHTML ="Key is ready...";}, 15*x+d);
+
+
+setTimeout(function () {
+load.innerHTML ="Key is ready..._";}, 16*x+d);
+
+setTimeout(function () {
+load.innerHTML = "Key is ready...";}, 17*x+d);
 
 setTimeout(function () {
 load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0";}, d*10);
@@ -173,32 +181,28 @@ load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &
 
 
 setTimeout(function () {
-load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.0.0 Encrypting_";}, d*13+2700);
+load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.2.0 Encrypting_";}, d*13+2700);
 
 setTimeout(function () {
-load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.0.0 Encrypting ";}, d*13+3000);
+load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.2.0 Encrypting ";}, d*13+3000);
 
 setTimeout(function () {
-load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.0.0 Encrypting_";}, d*13+3300);
+load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.2.0 Encrypting_";}, d*13+3300);
 
 setTimeout(function () {
-load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.0.0 Encrypting.";}, d*13+3600);
+load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.2.0 Encrypting.";}, d*13+3600);
 
 setTimeout(function () {
-load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.0.0 Encrypting..";}, d*13+3900);
+load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.2.0 Encrypting..";}, d*13+3900);
 
 setTimeout(function () {
-load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.0.0 Encrypted: " + encrypted + "<br>Sucessfully encrypted. <span id='cursor'>_</span>";}, d*13+4200);
+load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.2.0 Encrypted: " + encrypted + "<br>Sucessfully encrypted. <span id='cursor'>_</span>";}, d*13+3900);
 
 setTimeout(function () {
-document.getElementById('t1').value = encrypted;
-document.getElementById('t1').style.height = document.getElementById('t1').scrollHeight + 'px';}, d*13+4200); 
+load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.2.0 Encrypted: " + encrypted + "<br>Sucessfully encrypted. <BR>This sceen will be CLEAR in 10 seconds.<br>C:<span id='cursor'>_</span>";}, d*13+4000);
 
 setTimeout(function () {
-load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br><br>SYMMETRIC ENCRYPTION WITH 256 LONG KEY<br> ENCRYPTION INPUTS Actual Key:  " + encrypted.key + " iv: " + encrypted.iv +" salt: " + encrypted.salt  + " Ciphertext: " + encrypted.ciphertext + " AES-256 implementation with Crypto-js v 4.0.0 Encrypted: " + encrypted + "<br>Sucessfully encrypted. <BR>This sceen will be CLEAR in 10 seconds.<br>C:<span id='cursor'>_</span>";}, d*13+4400);
-
-setTimeout(function () {
-load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br> C:<span id='cursor'>_</span>";}, d*13+14400);
+load.innerHTML ="ADEVANCED ENCRYPTION STANDARD<br>ENCRYPT 72 v 1.0.0 Copyright &copy; 2024  MONTE KIETPAWPAN<br> C:<span id='cursor'>_</span>";}, d*13+14000);
 }
 
 
@@ -408,6 +412,17 @@ myInput.onkeyup = function() {
     sp.classList.remove("valid");
     sp.classList.add("invalid");
   }
+
+ // Validate space
+    var spa = /[' ']+/g;
+    if(myInput.value.match(spa)) {  
+    sa.classList.remove("invalid");
+    sa.classList.add("valid");
+  } else {
+    sa.classList.remove("valid");
+    sa.classList.add("invalid");
+  }
+
 
 
 }
