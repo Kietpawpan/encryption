@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!ENCRYPT 72 Copyright (C) 2024 Monte Kietpwpan | v 1.0.0 August 7, 2024>
+<!Copyright (C) 2024 Monte Kietpwpan | August 7, 2024>
 
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -10,7 +10,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="encrypt.css">
-<link rel="stylesheet" href="font-awesome.min.css">
 <link rel="stylesheet" href="./MNRE _ Carbon_files/css(1)">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -178,7 +177,7 @@ Encrypted:
 </p>
 <br><br>
 
-<div id="Report">Encryption Inputs:</div>
+<div id="Report">Encryption Report:</div>
 <div
 
 	id="para" 
@@ -281,7 +280,7 @@ Decrypted:
 <ol>
 <li> Secret key ที่ใช้ล็อคและปลดล็อคข้อมูล เป็นคำหรือวลีก็ได้ และควรคาดเดายาก คือ มี<font color="green">ตัวพิมพ์เล็ก / ตัวพิมพ์ใหญ่ / อักขระพิเศษ / ช่องว่าง / ตัวเลข / และมีอย่างน้อย 8 ตัว</font> ระบบจะแปลง คำหรือวลีนั้น เป็น actual key ขนาด 64 ไบต์ (512 บิท) และแปลงข้อมูลต้นฉบับ (plaintext) เป็นรหัสเลขฐานสอง (ciphertext) เพื่อผสมกับ key (round key) รอบละ 1 ดอก โดยมีการตัดข้อมูลเป็น block แต่ละ block ถูกตัดย่อยเป็นชิ้น ๆ แล้วสลับที่กัน ไม่ให้แปรผันแบบเส้นตรงกับข้อมูลเดิม (nonlinear complex modification) และมีการเปลี่ยน round key ทุกรอบ โดยที่จำนวนรอบการเข้ารหัส คือ 14 รอบ ซึ่งเป็นวิธีเข้ารหัสแบบ block cipher ที่มีความปลอดภัยสูงสุดในปัจจุบัน (AES-256)</li>
 
-<li>โปรแกรมนี้ใช้ crypto-js.min.js ในการเข้ารหัสแบบ AES โหมด CBC และใช้ Pkcs7 padding scheme โดยอาศัย JavaScript Library จาก <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js เวอร์ชันล่าสุด 4.2.0)</li>
+<li>โปรแกรมนี้ใช้ crypto-js.min.js ในการเข้ารหัสแบบ AES โหมด CBC และใช้ Public-Key Cryptography Standards (Pkcs7) padding scheme โดยอาศัย JavaScript Library จาก <a style="text-decoration:none;" href="https://github.com/brix/crypto-js/blob/develop/docs/QuickStartGuide.wiki#user-content-AES">Github repository (crypto-js เวอร์ชันล่าสุด 4.2.0)</li>
 
 <li>ในปี พ.ศ. 2567 สำนักงานความมั่นคงปลอดภัยไซเบอร์และโครงสร้างพื้นฐานของสหรัฐอเมริกา (<a style="text-decoration:none;" href="23_0918_fpic_AES-Transition-WhitePaper_Final_508C_24_0513.pdf
 ">Cybersecurity and Infrastructure Security Agency</a>) ยังคงแนะนำให้หน่วยงานรัฐบาลสหรัฐอเมริกา ใช้วิธี AES ในการเข้ารหัสข้อมูลข่าวสารลับ แทนมาตรฐานเดิม (Data Encryption Standard หรือ DES)</li>
