@@ -11,12 +11,10 @@ $(document).on('input', 'textarea', function () {
 
 
 
-function enc(){ 
-var aes = document.getElementById('t1').value="";
-plaintext = document.getElementById('data1').value="";
-var key0 = "monte988";
-var key = sha3_512(sha3_512(key0));
-var encrypted = CryptoJS.AES.encrypt(plaintext, key);
+function enc(){
+aes = sha3_512(document.getElementById('key1').value);
+plaintext = document.getElementById('data1').value;
+var encrypted = CryptoJS.AES.encrypt(plaintext, aes);
 document.getElementById('t1').value= encrypted;
 }
 
